@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating My First Game</title>
+    <!-- This script links to the JavaScript file -->
+    <script src="code.js"></script>
+    <!-- This links to the CSS file -->
+    <link href="main.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <!-- The header shows on the welcome page -->
+        <h1 id="heading">Welcome to My Page</h1>
+        <!-- This button triggers the updateText function -->
+        <button onclick="updateText();">Ready for GoldFish?</button>
+    </header>
+
+    <p>
+        <!-- Instructions for the game -->
+        Click the button above to start playing my game!<br>
+        Gold Fish Rules:<br>
+        1. Click the button to draw a card 1-10.<br>
+        2. If your card matches the computer's card, you win!.<br>
+        3. If your card doesn't match the computer's card, you lose!.<br>
+        4. Have fun playing!<br>
+    </p>
+        <!--Button to play the game -->
+        <button onclick="playGoldFish();">Draw Card</button>
+
+        
+        <!-- where you can see the game playing -->
+        <p id="gameResult"></p>
+        <!-- Game area will be populated by JavaScript -->
+    <p>
+        <!-- Link to JavaScript file -->
+         <script src="code.js"></script>
+    
+</body>
+</html>
