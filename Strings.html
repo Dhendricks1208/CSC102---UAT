@@ -1,0 +1,80 @@
+<!-- Donneshia Hendricks 02/10/2026-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--This helps text display correctly-->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--This is my Title-->
+        <title>Name Validation</title>
+
+        <style>
+            /* This shows my font and background color for the whole page */
+            body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: lightskyblue;
+            color: yellow;
+            margin: 0;
+            padding: 0;
+            }
+
+            /* This will center the text and make it bigger */
+            .container {
+            max-width: 720px;
+            margin: 40px auto;
+            padding: 24px;
+            }
+
+            /* This will style my title */
+            h1 {
+            margin-top: 0;
+            font-size: 36px;
+            margin-bottom: 16px;
+            letter-spacing: 0.5px;
+            }
+
+            /* This will style my input boxes */
+            input {
+            width: 100%;
+            padding: 12px;
+            border-radius: 10px;
+            border: 1px solid rgba(255,255,255,0.2);
+            background: lightyellow;
+            color: navy;
+            outline: none;
+            box-sizing: border-box;
+            }
+
+            /* This is my button style */
+            button:hover {
+            filter: brightness(100%);
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Name Validation</h1>
+        <form id="userForm">
+            <!-- This describes the first name input -->
+            <label for="firstName">Enter First Name:</label>
+            <input type="text" id="firstName" placeholder="First Name"><br><br>
+            <!-- This describes the last name input -->
+            <label for="lastName">Enter Last Name:</label>
+            <input type="text" id="lastName" placeholder="Last Name"><br><br>
+            <!-- This describes the zipcode input -->
+            <label for="zipcode">Enter Zipcode Here:</label>
+            <input type="text" id="zipcode" placeholder="5 Digits Only"><br><br>
+            <!-- This is my button-->
+            <button type="submit">Validate Here!</button>
+        </form>
+        
+        <!-- This is my validation warning message -->
+        <div id="validationMessage" class="message warning"></div>
+
+        <!-- This is where my secret message will be displayed-->
+        <div id="secretMessage" class="message success"></div>
+
+        <script src="nameinput.js"></script>
+    </body>
+
+</html>
