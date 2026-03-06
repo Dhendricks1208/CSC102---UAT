@@ -1,0 +1,57 @@
+/* Donneshia Hendricks -- Intro to Programming -- Moving Meme */
+
+/* 
+    style.css
+    Heart Meme Movement Styling
+    Author: Donneshia
+*/
+
+/* Here I am giving my page a cute background */
+body {
+    background-color: #cc126c; /* light pink */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    /*This prevents any scrollbars from appearing when the meme moves around the page*/
+    overflow: hidden; 
+}
+
+/* This is how I style my title */
+h1 {
+    color: #e8e6ec;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* These are my style buttons */
+button {
+    padding: 12px 25px;
+    margin: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    background-color: #ff66a3;
+    color: white;
+    cursor: pointer;
+}
+
+button:disabled {
+    background-color: #ffb3d9;
+    cursor: not-allowed;
+}
+
+/* This is my message area */
+#message {
+    margin-top: 20px;
+    text-align: center;
+    font-weight: bold;
+    color: #f3eaef;
+}
+
+/* This is my meme image styling */
+#meme {
+    width: 150px;          /* This is required for movement math */
+    position: absolute;    /* This is required for movement */
+    top: 100px;
+    left: 100px;
+    user-select: none;     /* This prevents accidental dragging */
+}

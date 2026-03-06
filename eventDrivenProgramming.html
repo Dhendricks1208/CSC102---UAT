@@ -1,0 +1,94 @@
+<!-- Write HTML code to create the Start button.
+Write HTML code to create the Stop button.
+Create a JavaScript function to enable/disable the Start button.
+This function should call another function that moves the meme image around the page.
+Create a JavaScript function to enable/disable the Stop button.
+This function should call another function that stops moving the meme image.
+Wire the Start button using the onClick to JavaScript Functions to disable the start button and Enable the opposite button clicked.
+Wire the Stop button using the onClick to JavaScript Functions to disable the stop button and Enable the opposite button clicked.
+Test the buttons.
+Have at least 1 creative element – images, fonts, background color, etc. 
+Create a nice look and feel for the user and make a great user experience!
+Comment above almost every line of your code, both HTML and JavaScript!
+Put a comment at the top of your HTML file with your name in it.
+Take one or more screen prints of your application running -->
+
+<!-- Name: Donneshia Hendricks -- Assignment: Event Driven Programming - Moving Meme-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Set page title -->
+    <title>Moving Meme Assignment</title>
+
+    <!-- Here is where I add a creative background color -->
+    <style>
+        body {
+            background-color: #1d0244;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Here is where I can style the meme image */
+        #meme {
+            width: 150px;
+            /* This is Required for my meme to move */
+            position: absolute; 
+            top: 100px;
+            left: 100px;
+        }
+
+        /* These are my style buttons */
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+        }
+
+        /* This is where my message will be displayed */
+        #message {
+            margin-top: 20px;
+            font-weight: bold;
+            color: purple;
+        }
+    </style>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+
+    <!-- My page title -->
+    <h1>Moving Meme Demo</h1>
+
+    <!-- My start button that calls the JS function-->
+    <button id="startBtn" onclick="startMovement()">Start</button>
+
+    <!-- My stop button that called the JS function-->
+    <button id="stopBtn" onclick="stopMovement()" disabled>Stop</button>
+
+    <!-- This is my meme image that will move on the button click -->
+    <img id="meme" src="heart-meme.png" alt="meme">
+
+    <!-- Area for innerHTML messages -->
+    <div id="message"></div>
+
+    <!-- Required form with submit -->
+    <form onsubmit="validateInput(); return false;">
+        <!-- Label for input -->
+        <label>Type anything (just for validation test):</label>
+
+        <!-- Text input -->
+        <input type="text" id="userInput">
+
+        <!-- Submit button -->
+        <input type="submit" value="Submit">
+
+        <!-- Here is my validation message-->
+        <div id="validationMessage"></div>
+    </form>
+
+    <!-- Link to external JavaScript file -->
+    <script src="script.js"></script>
+
+</body>
+</html>
