@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--This is my title-->
+        <title>My Palendrome Checker</title>
+        <!--This is my stylesheet connection-->
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <!-- This is the header for my webpage -->
+        <h1>My Palindrome Checker</h1>
+        
+        <!-- This is the description for my webpage -->
+        <p>
+            A Palindrome is a word, phrase, number, or other sequence of characters which reads the same backward as forward,<br>
+            such as "madam" or "racecar". This tool allows you to check if a given word or phrase is a palindrome. <br>
+            <br>
+
+            <!-- This is my form for my user input -->
+            <form onsubmit="checkWord(); return false;">
+                <!-- This is my label for my input-->
+                <label>Enter a word:</label>
+                <!-- This is my input field -->
+                <input type="text" id="input">
+                <!-- This is my submit button -->
+                <input type="submit" value="Check if Palindrome">
+            </form>
+
+            
+
+            <!-- This is where the result of the palindrome check will show -->
+            <p id="paragraph"></p>
+            
+            <!-- This is my script connection -->
+        <script src="script.js"></script>
+            
+    </body>
+</html>

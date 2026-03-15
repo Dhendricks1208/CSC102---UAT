@@ -1,89 +1,34 @@
-// Donneshia Hendricks Intro to Programming
-// Event Driven Programming
+// Donneshia Hendricks -- Intro to Programming -- CSC102
 
+// This function is to check if the chosen word is a palindrome or not.
+function checkWord() {
+    // This is to get the user input and the paragraph element where the result will be displayed.
+    let input = document.getElementById("input");
+    // This is to get the paragraph element.
+    let paragraph = document.getElementById("paragraph");
 
-// Global variables for movement
-let moveInterval;
-let xPos = 100;   // starting X position
-let yPos = 100;   // starting Y position
-let xSpeed = 4;   // horizontal speed
-let ySpeed = 4;   // vertical speed
+    // If the user input is empty, then show a message to the user.
+    if (!input.value) {
+        // This is to show a message to the user if the input is empty.
+        paragraph.innerHTML = "<p>Input is empty</p>";
+        return;
+        // This is to check if the input is a single character, then show a message to the user if it is.
+    } else if (input.value.length === 1) {
+        paragraph.innerHTML = "<p>Input is a single character</p>";
+        return;
+    }
 
-// The function that is called when the start button is clicked
-function startMovement() {
+    // this is to convert to lowercase
+    const inputVal = input.value.toLowerCase();
+    //this is to reverse the string
+    const reversedVal = input.value.split('').reverse().join('').toLowerCase(); 
 
-    // This is the disable Start button
-    document.getElementById("startBtn").disabled = true;
-
-    // Here is my enable Stop button
-    document.getElementById("stopBtn").disabled = false;
-
-    // This is where my display message using innerHTML will show up
-    document.getElementById("message").innerHTML = "Heart meme is bouncing around!";
-
-    // This is to start the movement of my meme
-    bounceMeme();
-}
-
-// This is the function that is called when my stop button is clicked
-function stopMovement() {
-
-    // This is the disable Stop button
-    document.getElementById("stopBtn").disabled = true;
-
-    // This is the enable Start button
-    document.getElementById("startBtn").disabled = false;
-
-    // This is the stop the interval movement function
-    clearInterval(moveInterval);
-
-    // This is my display message using innerHTML that will show up when the stop button is clicked
-    document.getElementById("message").innerHTML = "Heart meme stopped.";
-}
-
-// I added this function so the meme movesd smoothly on the screen and bounces off the edges
-function bounceMeme() {
-
-    // This runs the movement 60 times per second
-        
-    moveInterval = setInterval(function () {
-
-        // This gets my meme element
-        let meme = document.getElementById("meme");
-
-        // This will get window width and height
-        let maxWidth = window.innerWidth - meme.offsetWidth;
-        let maxHeight = window.innerHeight - meme.offsetHeight;
-
-
-        // Update position
-        xPos += xSpeed;
-        yPos += ySpeed;
-
-        // This is what I used for the meme to bounce off the left and right edges
-        if (xPos <= 0 || xPos >= maxWidth) {
-            xSpeed = -xSpeed; // reverse direction
-        }
-
-        // This is what I used for my meme to bounce off the top or bottom edges
-        if (yPos <= 0 || yPos >= maxHeight) {
-            ySpeed = -ySpeed; // reverse direction
-        }
-
-        // This is how my meme goes into new positions
-        meme.style.left = xPos + "px";
-        meme.style.top = yPos + "px";
-
-    }, 16);
-}
-
-// This is the required function for form validation
-function validateInput() {
-
-    // This is where you get the user input value
-    let text = document.getElementById("userInput").value;
-
-    // This is the display validation message
-    document.getElementById("message").innerHTML = 
-        "You entered: " + text;
+    //this is to check if palindrome or not
+    if (reversedVal === inputVal) {
+        // This is to show a message to the user if the chosen word is a palindrome.
+        paragraph.innerHTML = `<p><span>${inputVal}</span> is a Palindrome</p>`;
+    } else {
+        // This is to show a message to the user if the chosen word is not a palindrome.
+        paragraph.innerHTML = `<p><span>${inputVal}</span> is not a Palindrome</p>`;
+    }
 }
