@@ -1,3 +1,5 @@
+<!-- Donneshia Hendricks -- Intro to Programming -- Palindrome Checker Updated-->
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -17,24 +19,23 @@
             A Palindrome is a word, phrase, number, or other sequence of characters which reads the same backward as forward,<br>
             such as "madam" or "racecar". This tool allows you to check if a given word or phrase is a palindrome. <br>
             <br>
+        </p>
+        <!-- This is my form for my user input -->
+        <form onsubmit="checkWord(); return false;">
+            <!-- This is my label for my input-->
+            <label>Enter a word:</label>
+            <!-- This is my input field -->
+            <input type="text" id="input">
+            <!-- This is my submit button -->
+            <input type="submit" value="Check if Palindrome">
+        </form>
 
-            <!-- This is my form for my user input -->
-            <form onsubmit="checkWord(); return false;">
-                <!-- This is my label for my input-->
-                <label>Enter a word:</label>
-                <!-- This is my input field -->
-                <input type="text" id="input">
-                <!-- This is my submit button -->
-                <input type="submit" value="Check if Palindrome">
-            </form>
-
+        <!-- This is where the result of the palindrome check will show -->
+        <p id="paragraph"></p>
             
-
-            <!-- This is where the result of the palindrome check will show -->
-            <p id="paragraph"></p>
+        <div id="stats"></div>    
             
-            <!-- This is my script connection -->
+        <!-- This is my script connection -->
         <script src="script.js"></script>
-            
     </body>
 </html>
