@@ -1,64 +1,57 @@
-/* Donneshia Hendricks -- Intro to Programming -- CSC102*/
+/* Donneshia Hendricks -- Intro to Programming -- Moving Meme */
 
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+/* 
+    style.css
+    Heart Meme Movement Styling
+    Author: Donneshia
+*/
 
-* {
-    /* This is the styling for all of the elements */
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Pacifico', cursive;
-}
-
+/* Here I am giving my page a cute background */
 body {
-    /* This is the styling for the body element */
-    background-color: yellow;
-    padding: 0 50px;
-    display: grid;
-    place-items: center;
-    min-height: 100vh;
+    background-color: #cc126c; /* light pink */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    /*This prevents any scrollbars from appearing when the meme moves around the page*/
+    overflow: hidden; 
 }
 
-input,
-/* This is the styling for the input element */
-button {
-    background-color: transparent;
-    outline: transparent;
-    border: none;
-    border-bottom: 2px solid #fff;
-    /* border-inline add a border to the left and right of the element */
-    /* border-block adds a border to the top and bottom of the element */
-    border-inline: 1px solid rgba(255, 255, 255, .2);
-    border-top: 1px solid rgba(255, 255, 255, .2);
-    color: #d81515;
-    font-size: 1.1rem;
-    padding: .5rem 1rem;
-
-}
-button {
-    /* This is the styling for the button element */
-    cursor: pointer;
-    transition: 200ms ease-in-out;
-    background-color: 200ms ease-in-out color;
-}
-button:hover {
-    background-color: #e28282;
-    color: #d81515;
-}
-button:active {
-    transform: scale(.9);
-}
-
-p {
-    /* This is the styling for the paragraph element */
-    color: #d81515;
-    margin-top: 3rem;
+/* This is how I style my title */
+h1 {
+    color: #e8e6ec;
     text-align: center;
-    font-size: 1.3rem;
-    font-weight: 300;
+    margin-top: 20px;
 }
-span {
-    /* This is the styling for the span element */
-    color: #1e56ee;
-    font-weight: 700;
+
+/* These are my style buttons */
+button {
+    padding: 12px 25px;
+    margin: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    background-color: #ff66a3;
+    color: white;
+    cursor: pointer;
+}
+
+button:disabled {
+    background-color: #ffb3d9;
+    cursor: not-allowed;
+}
+
+/* This is my message area */
+#message {
+    margin-top: 20px;
+    text-align: center;
+    font-weight: bold;
+    color: #f3eaef;
+}
+
+/* This is my meme image styling */
+#meme {
+    width: 150px;          /* This is required for movement math */
+    position: absolute;    /* This is required for movement */
+    top: 100px;
+    left: 100px;
+    user-select: none;     /* This prevents accidental dragging */
 }
