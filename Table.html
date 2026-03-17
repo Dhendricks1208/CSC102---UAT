@@ -1,0 +1,76 @@
+<!-- Donneshia Hendricks -- Intro to Programming -- Table Creation-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--This is my table style sheet connection-->
+    <link rel="stylesheet" href="tableStyle.css">
+    <title>Table Creation</title>
+
+    <style>
+        /* This is my styling for my table borders*/
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            font-size: 1.1rem;
+        }
+
+        th, td {
+            border: 2px solid #ff4d6d;
+            padding: 12px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #ffe3ec;
+        }
+    </style>
+</head>
+<body>
+    <h1>Table Creation</h1>
+
+    <p style="text-align:center;">
+    </p>
+    <div class="table-container">
+        <table>
+            <tr>
+                <th>Device Name</th>
+                <th>Cost</th>
+                <th>Battery Life</th>
+                <th>Storage</th>
+            </tr>
+            <tr>
+                <td>IPhone 17 Pro Max</td>
+                <td>$1200</td>
+                <td>24 hours</td>
+                <td>256GB</td>
+            </tr>
+            <tr>
+                <td>Samsung Galaxy S24</td>
+                <td>$749</td>
+                <td>22 hours</td>
+                <td>256GB</td>
+            </tr>
+            <tr>
+                <td>Google Pixel 8</td>
+                <td>$699</td>
+                <td>24 hours</td>
+                <td>128GB</td>
+            </tr>
+            <tr>
+                <td>OnePlus 12</td>
+                <td>$699</td>
+                <td>23 hours</td>
+                <td>256GB</td>
+            </tr>
+        </table>
+    </div>
+    
+
+    <!-- This is my table source -->
+    <!-- Source: https://www.w3schools.com/html/html_tables.asp -->
+</html>

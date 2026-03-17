@@ -1,0 +1,35 @@
+/* Donneshia Hendricks -- Intro to Programming -- Table*/
+
+body {
+    /* The background color of my table*/
+    background-color: lightskyblue;
+    /* The font of my table*/
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+    /* The font size and color of my table*/
+    font-size: 1.1rem;
+    color: #444;
+}
+
+tr:hover {
+    background-color: #ffd6e0;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+@media (max-width: 600px) {
+    table {
+        font-size: 0.9rem;
+        width: 100%;
+    }
+    th, td {
+        padding: 8px;
+    }
+}
